@@ -1,4 +1,6 @@
 :root {
+	interpolate-size: allow-keywords;
+
 	--white: rgb(255, 255, 255);
 	--light-purple: hsl(275, 100%, 97%);
 	--purple: hsl(292, 16%, 49%);
@@ -19,8 +21,66 @@ body {
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-style: normal;
-    color: var(--purple);
-    background-color: var(--light-purple);
-    // box-decoration-break: var(--light-purple);
-    line-height: 1.5;
+	color: var(--purple);
+	background-color: var(--light-purple);
+	// box-decoration-break: var(--light-purple);
+	line-height: normal;
 }
+
+.card {
+	&__title {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		line-height: 1.5;
+		&-faq {
+			font-weight: 700;
+			color: var(--dark-purple);
+		}
+		&-img {
+			padding: 1em;
+		}
+	}
+	&__box {
+		padding: 1.5em;
+		&-content {
+			&-questions {
+				font-size: 1rem;
+				font-weight: 600;
+				padding: 1.5em 0;
+				color: var(--dark-purple);
+				list-style: none;
+				cursor: pointer;
+				&::-webkit-details-marker {
+					display: none;
+				}
+				&::after {
+					content: url('/dist/img/icon-plus.svg');
+				}
+			}
+			&-answer{
+				padding-bottom: 1.5em;
+			}
+		}
+	}
+}
+
+details {
+	overflow: hidden;
+}
+
+details::details-content {
+	block-size: 0;
+	transition: block-size 0.5s, content-visibility 0.5s;
+	transition-behavior: allow-discrete;
+}
+
+details[open]::details-content {
+	block-size: auto;
+	transition: block-size 0.5s, content-visibility 0.5s;
+}
+
+// img,
+// svg {
+// 	display: block;
+// }
