@@ -136,12 +136,6 @@ details[open]::details-content {
 	transition: block-size 0.5s, content-visibility 0.5s;
 }
 
-// hr {
-// 	border: none;
-// 	height: 0.5px;
-// 	background-color: var(--purple);
-// }
-
 @media (width >= 48em) {
 	.container {
 		height: 320px;
