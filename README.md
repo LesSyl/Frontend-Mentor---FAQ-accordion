@@ -44,7 +44,7 @@ Mobile
 
 ### What I learned
 
-The project was developed using HTML and CSS technologies. Interactive elements were implemented using <details> and <summary> tags, which made it possible to avoid using JavaScript.
+The project was developed using HTML and CSS technologies. Interactive elements were implemented using ```<details>``` and ```<summary>``` tags, which made it possible to avoid using JavaScript.
 
 ## Author
 
