@@ -7,6 +7,7 @@
 	--purple-shadow: hsla(292, 16%, 49%, 0.4);
 	--dark-purple: hsl(292, 42%, 14%);
 	--pink: hsl(281, 83%, 54%);
+	--hr-color: hsla(293, 16%, 49%, 0.2);
 }
 
 *,
@@ -48,9 +49,8 @@ body {
 }
 .box {
 	height: 100vh;
-	padding-top: 8.9em;
-	padding-bottom: 8.9em;
-
+	padding-top: 8.5em;
+	padding-bottom: 8.5em;
 }
 
 .card {
@@ -70,11 +70,13 @@ body {
 			font-weight: 700;
 			color: var(--dark-purple);
 			margin-left: 0.7em;
-
 		}
-
 	}
 	&__box {
+		border-bottom: 1px solid var(--hr-color);
+		&:last-child {
+			border-bottom: none;
+		}
 		details[open] {
 			--summary-icon: url('/dist/img/icon-minus.svg');
 		}
@@ -86,7 +88,7 @@ body {
 				justify-content: space-between;
 				font-size: 1.08rem;
 				font-weight: 600;
-				padding: 1.1em 0;
+				padding: 1.5em 0;
 				color: var(--dark-purple);
 				list-style: none;
 				cursor: pointer;
@@ -107,7 +109,7 @@ body {
 			&-answer {
 				font-size: 0.93rem;
 				line-height: 1.4;
-				padding: .5em 0 1.5em 0;
+				padding: 0.5em 0 1.5em 0;
 			}
 		}
 	}
@@ -134,23 +136,50 @@ details[open]::details-content {
 	transition: block-size 0.5s, content-visibility 0.5s;
 }
 
+// hr {
+// 	border: none;
+// 	height: 0.5px;
+// 	background-color: var(--purple);
+// }
 @media (width >= 46em) {
 	.container {
+		height: 320px;
 		background-image: url('/dist/img/background-pattern-desktop.svg');
 	}
 	.box {
 		max-width: 1440px;
 		margin: auto;
-		padding-left: 50px;
-		padding-right: 50px;
+		padding-top: 11.4em;
+		// padding-bottom: 10em;
+		// padding-left: 50px;
+		// padding-right: 50px;
 	}
 	.card {
 		margin: auto;
 		width: 37.5em;
-		&__title {
-			&-faq {
-				font-size: 3.8rem;
+		padding: 1.5em 1.7em 0.75em 2em;
+		&__box-content {
+			&-questions {
+				padding: 1em 0;
+				font-size: 1.1rem;
+				&::after {
+					padding-left: 1.5em;
+				}
+			}
+			&-answer{
+				font-size: 1rem;
+
 			}
 		}
+		&__title {
+			&-faq {
+				font-size: 3.7rem;
+				margin-left: 0.3em;
+			}
+		}
+		img {
+		height: 2.5em;
 	}
+	}
+	
 }
