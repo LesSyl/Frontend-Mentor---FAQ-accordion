@@ -141,7 +141,8 @@ details[open]::details-content {
 // 	height: 0.5px;
 // 	background-color: var(--purple);
 // }
-@media (width >= 46em) {
+
+@media (width >= 48em) {
 	.container {
 		height: 320px;
 		background-image: url('/dist/img/background-pattern-desktop.svg');
@@ -149,10 +150,7 @@ details[open]::details-content {
 	.box {
 		max-width: 1440px;
 		margin: auto;
-		padding-top: 11.4em;
-		// padding-bottom: 10em;
-		// padding-left: 50px;
-		// padding-right: 50px;
+		padding-top: 7em;
 	}
 	.card {
 		margin: auto;
@@ -166,9 +164,8 @@ details[open]::details-content {
 					padding-left: 1.5em;
 				}
 			}
-			&-answer{
+			&-answer {
 				font-size: 1rem;
-
 			}
 		}
 		&__title {
@@ -178,8 +175,13 @@ details[open]::details-content {
 			}
 		}
 		img {
-		height: 2.5em;
+			height: 2.5em;
+		}
 	}
+}
+
+@media (width >= 62em) {
+	.box {
+		padding-top: 11.4em;
 	}
-	
 }
