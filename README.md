@@ -19,11 +19,11 @@ This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://w
 ### Screenshot
 Desktop
 
-![](images/desktop.jpeg)
+![desktop](/dist/img/desktop.png)
 
 Mobile
 
-![](images/mobile.jpeg)
+![mobile](/dist/img/mobile.png)
 
 ### Links
 
@@ -44,7 +44,7 @@ Mobile
 
 ### What I learned
 
-
+The project was developed using HTML and CSS technologies. Interactive elements were implemented using <details> and <summary> tags, which made it possible to avoid using JavaScript.
 
 ## Author
 
